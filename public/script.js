@@ -36,7 +36,7 @@ function setUsername() {
 function updateUserDisplay() {
     document.getElementById('currentUser').innerText = '';
     const userDiv = document.getElementById('currentUser');
-    userDiv.innerHTML = `<i class="fas fa-user-circle"></i> ${currentUser}`;
+    userDiv.innerHTML = `<span class="material-icons">account_circle</span> ${currentUser}`;
     document.getElementById('username').value = '';
 }
 
@@ -113,9 +113,9 @@ async function loadThreads() {
             card.innerHTML = `
                 <h3>${escapeHtml(thread.title)}</h3>
                 <div class="thread-meta">
-                    <span><i class="fas fa-user"></i> ${escapeHtml(thread.author)}</span>
-                    <span><i class="fas fa-calendar"></i> ${date}</span>
-                    <span><i class="fas fa-comments"></i> ${thread.replies} réponse(s)</span>
+                    <span><span class="material-icons">person</span> ${escapeHtml(thread.author)}</span>
+                    <span><span class="material-icons">calendar_today</span> ${date}</span>
+                    <span><span class="material-icons">chat</span> ${thread.replies} réponse(s)</span>
                 </div>
                 <div class="thread-preview">${escapeHtml(thread.content.substring(0, 100))}...</div>
             `;
@@ -145,8 +145,8 @@ async function openThread(threadId, threadTitle) {
             const date = new Date(message.createdAt).toLocaleString('fr-FR');
             
             msgDiv.innerHTML = `
-                <div class="message-author"><i class="fas fa-user-circle"></i> ${escapeHtml(message.author)}</div>
-                <div class="message-time"><i class="fas fa-clock"></i> ${date}</div>
+                <div class="message-author"><span class="material-icons">account_circle</span> ${escapeHtml(message.author)}</div>
+                <div class="message-time"><span class="material-icons">schedule</span> ${date}</div>
                 <div class="message-content">${escapeHtml(message.content).replace(/\n/g, '<br>')}</div>
             `;
             messagesList.appendChild(msgDiv);

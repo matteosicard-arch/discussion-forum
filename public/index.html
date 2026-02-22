@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum de Discussion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <h1><i class="fas fa-comments"></i> Forum de Discussion</h1>
+            <h1><span class="material-icons">chat</span> Forum de Discussion</h1>
             <p>Rejoins la communauté!</p>
         </header>
 
@@ -19,7 +19,7 @@
         <div class="user-section">
             <div class="user-input">
                 <input type="text" id="username" placeholder="Ton pseudo" maxlength="20">
-                <button onclick="setUsername()"><i class="fas fa-check"></i> Définir</button>
+                <button onclick="setUsername()"><span class="material-icons">check</span> Définir</button>
             </div>
             <div id="currentUser" class="current-user"></div>
         </div>
@@ -28,9 +28,9 @@
         <div class="main-content">
             <!-- Sidebar -->
             <aside class="sidebar">
-                <h3><i class="fas fa-folder"></i> Catégories</h3>
+                <h3><span class="material-icons">folder</span> Catégories</h3>
                 <div id="categories" class="categories-list"></div>
-                <button class="btn-primary" onclick="showNewThreadForm()"><i class="fas fa-message"></i> Nouveau sujet</button>
+                <button class="btn-primary" onclick="showNewThreadForm()"><span class="material-icons">message</span> Nouveau sujet</button>
             </aside>
 
             <!-- Content Area -->
@@ -43,32 +43,32 @@
 
                 <!-- View: Thread Messages -->
                 <div id="threadView" class="view">
-                    <button class="btn-back" onclick="backToCategories()"><i class="fas fa-arrow-left"></i> Retour</button>
+                    <button class="btn-back" onclick="backToCategories()"><span class="material-icons">arrow_back</span> Retour</button>
                     <h2 id="threadTitle"></h2>
                     <div id="messagesList" class="messages-list"></div>
                     <div class="new-message">
                         <textarea id="messageContent" placeholder="Écris ta réponse..."></textarea>
-                        <button onclick="addMessage()"><i class="fas fa-paper-plane"></i> Envoyer</button>
+                        <button onclick="addMessage()"><span class="material-icons">send</span> Envoyer</button>
                     </div>
                 </div>
 
                 <!-- View: New Thread Form -->
                 <div id="newThreadView" class="view">
-                    <button class="btn-back" onclick="backToCategories()"><i class="fas fa-arrow-left"></i> Retour</button>
-                    <h2><i class="fas fa-pen-to-square"></i> Créer un nouveau sujet</h2>
+                    <button class="btn-back" onclick="backToCategories()"><span class="material-icons">arrow_back</span> Retour</button>
+                    <h2><span class="material-icons">edit</span> Créer un nouveau sujet</h2>
                     <form id="threadForm" onsubmit="createThread(event)">
-                        <label><i class="fas fa-folder-open"></i> Catégorie:</label>
+                        <label><span class="material-icons">folder_open</span> Catégorie:</label>
                         <select id="categorySelect">
                             <option value="">Sélectionne une catégorie</option>
                         </select>
 
-                        <label><i class="fas fa-heading"></i> Titre:</label>
+                        <label><span class="material-icons">title</span> Titre:</label>
                         <input type="text" id="threadTitle" placeholder="Titre du sujet" required maxlength="100">
 
-                        <label><i class="fas fa-message"></i> Message:</label>
+                        <label><span class="material-icons">message</span> Message:</label>
                         <textarea id="threadContent" placeholder="Écris ton message..." required></textarea>
 
-                        <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Créer le sujet</button>
+                        <button type="submit" class="btn-primary"><span class="material-icons">send</span> Créer le sujet</button>
                     </form>
                 </div>
             </main>
