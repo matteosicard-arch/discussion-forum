@@ -103,9 +103,9 @@ body {
 
 .user-input button {
     padding: 10px 15px;
-    background: #d3d3d3;
+    background: white;
     color: #333;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -116,8 +116,8 @@ body {
 }
 
 .user-input button:hover {
-    background: #e8e8e8;
-    border-color: #999;
+    background: #f5f5f5;
+    border-color: #bbb;
 }
 
 .user-input button .material-icons {
@@ -242,9 +242,9 @@ body {
 .btn-primary {
     width: 100%;
     padding: 12px;
-    background: #d3d3d3;
+    background: white;
     color: #333;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -258,8 +258,8 @@ body {
 }
 
 .btn-primary:hover {
-    background: #e8e8e8;
-    border-color: #999;
+    background: #f5f5f5;
+    border-color: #bbb;
 }
 
 .btn-primary .material-icons {
@@ -440,9 +440,9 @@ body {
 
 .new-message button {
     padding: 12px;
-    background: #d3d3d3;
+    background: white;
     color: #333;
-    border: 1px solid #bbb;
+    border: 1px solid #ddd;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -455,8 +455,8 @@ body {
 }
 
 .new-message button:hover {
-    background: #e8e8e8;
-    border-color: #999;
+    background: #f5f5f5;
+    border-color: #bbb;
 }
 
 .new-message button .material-icons {
