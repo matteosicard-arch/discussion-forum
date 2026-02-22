@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum de Discussion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>💬 Forum de Discussion</h1>
+            <p>Rejoins la communauté!</p>
+        </header>
+
+        <!-- User Profile -->
+        <div class="user-section">
+            <div class="user-input">
+                <input type="text" id="username" placeholder="Ton pseudo" maxlength="20">
+                <button onclick="setUsername()">Définir</button>
+            </div>
+            <div id="currentUser" class="current-user"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Catégories</h3>
+                <div id="categories" class="categories-list"></div>
+                <button class="btn-primary" onclick="showNewThreadForm()">+ Nouveau sujet</button>
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content">
+                <!-- View: Threads List -->
+                <div id="threadsView" class="view active">
+                    <h2 id="categoryTitle">Tous les sujets</h2>
+                    <div id="threadsList" class="threads-list"></div>
+                </div>
+
+                <!-- View: Thread Messages -->
+                <div id="threadView" class="view">
+                    <button class="btn-back" onclick="backToCategories()">← Retour</button>
+                    <h2 id="threadTitle"></h2>
+                    <div id="messagesList" class="messages-list"></div>
+                    <div class="new-message">
+                        <textarea id="messageContent" placeholder="Écris ta réponse..."></textarea>
+                        <button onclick="addMessage()">Envoyer</button>
+                    </div>
+                </div>
+
+                <!-- View: New Thread Form -->
+                <div id="newThreadView" class="view">
+                    <button class="btn-back" onclick="backToCategories()">← Retour</button>
+                    <h2>Créer un nouveau sujet</h2>
+                    <form id="threadForm" onsubmit="createThread(event)">
+                        <label>Catégorie:</label>
+                        <select id="categorySelect">
+                            <option value="">Sélectionne une catégorie</option>
+                        </select>
+
+                        <label>Titre:</label>
+                        <input type="text" id="threadTitle" placeholder="Titre du sujet" required maxlength="100">
+
+                        <label>Message:</label>
+                        <textarea id="threadContent" placeholder="Écris ton message..." required></textarea>
+
+                        <button type="submit" class="btn-primary">Créer le sujet</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
