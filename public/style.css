@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f2f5;
+    background: white;
     color: #333;
     min-height: 100vh;
 }
@@ -15,32 +15,34 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background: white;
-    border-radius: 0;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: none;
     min-height: 100vh;
 }
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: white;
+    color: #333;
     padding: 30px;
     text-align: center;
-    border-bottom: 3px solid #764ba2;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: #333;
 }
 
 .header h1 i {
     margin-right: 10px;
+    color: #333;
 }
 
 .header p {
-    opacity: 0.9;
+    color: #666;
     font-size: 1.1em;
 }
 
@@ -52,7 +54,7 @@ body {
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 .user-input {
@@ -63,30 +65,31 @@ body {
 .user-input input {
     padding: 10px 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 14px;
+    background: white;
     transition: border 0.3s;
 }
 
 .user-input input:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+    border-color: #333;
+    box-shadow: none;
 }
 
 .user-input button {
     padding: 10px 15px;
-    background: #667eea;
+    background: #333;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
     transition: background 0.3s;
 }
 
 .user-input button:hover {
-    background: #764ba2;
+    background: #555;
 }
 
 .user-input button i {
@@ -95,10 +98,10 @@ body {
 
 .current-user {
     padding: 8px 15px;
-    background: #f5f5f5;
-    border: 2px solid #667eea;
-    border-radius: 20px;
-    color: #667eea;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #333;
     font-weight: 600;
 }
 
@@ -117,7 +120,7 @@ body {
     width: 250px;
     background: white;
     padding: 20px;
-    border-right: 1px solid #e0e0e0;
+    border-right: 1px solid #f0f0f0;
     position: sticky;
     top: 0;
     height: fit-content;
@@ -125,12 +128,13 @@ body {
 
 .sidebar h3 {
     margin-bottom: 15px;
-    color: #667eea;
+    color: #333;
     font-size: 16px;
 }
 
 .sidebar h3 i {
     margin-right: 8px;
+    color: #333;
 }
 
 .categories-list {
@@ -143,8 +147,8 @@ body {
     padding: 12px 15px;
     margin-bottom: 8px;
     background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     cursor: pointer;
     text-align: left;
     transition: all 0.3s;
@@ -153,15 +157,15 @@ body {
 }
 
 .category-btn:hover {
-    background: #f5f5f5;
-    border-color: #667eea;
-    color: #667eea;
+    background: #f9f9f9;
+    border-color: #333;
+    color: #333;
 }
 
 .category-btn.active {
-    background: #667eea;
+    background: #333;
     color: white;
-    border-color: #667eea;
+    border-color: #333;
 }
 
 .category-btn i {
@@ -199,10 +203,10 @@ body {
 .btn-primary {
     width: 100%;
     padding: 12px;
-    background: #667eea;
+    background: #333;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
     transition: background 0.3s;
@@ -211,7 +215,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: #764ba2;
+    background: #555;
 }
 
 .btn-primary i {
@@ -221,8 +225,8 @@ body {
 .btn-back {
     padding: 10px 15px;
     background: white;
-    border: 2px solid #e0e0e0;
-    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     cursor: pointer;
     margin-bottom: 20px;
     transition: all 0.3s;
@@ -231,9 +235,9 @@ body {
 }
 
 .btn-back:hover {
-    background: #f5f5f5;
-    border-color: #667eea;
-    color: #667eea;
+    background: #f9f9f9;
+    border-color: #333;
+    color: #333;
 }
 
 .btn-back i {
@@ -249,17 +253,18 @@ body {
 .thread-card {
     background: white;
     padding: 20px;
-    border-radius: 5px;
-    border-left: 5px solid #667eea;
-    border: 1px solid #e0e0e0;
-    border-left: 5px solid #667eea;
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+    border-left: 3px solid #333;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .thread-card:hover {
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-    transform: translateX(5px);
+    box-shadow: none;
+    border-left: 3px solid #555;
+    transform: none;
+    background: #fafafa;
 }
 
 .thread-card h3 {
@@ -277,7 +282,7 @@ body {
 }
 
 .thread-meta i {
-    color: #667eea;
+    color: #666;
     margin-right: 4px;
     width: 14px;
 }
@@ -296,7 +301,7 @@ body {
     margin: 20px 0;
     padding: 0;
     background: white;
-    border-radius: 5px;
+    border-radius: 4px;
     max-height: 500px;
     overflow-y: auto;
 }
@@ -305,15 +310,14 @@ body {
     background: white;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 5px;
-    border-left: 3px solid #667eea;
-    border: 1px solid #e0e0e0;
-    border-left: 3px solid #667eea;
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+    border-left: 3px solid #333;
 }
 
 .message-author {
     font-weight: 600;
-    color: #667eea;
+    color: #333;
     margin-bottom: 5px;
 }
 
@@ -345,32 +349,33 @@ body {
     gap: 10px;
     margin-top: 20px;
     padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #f0f0f0;
 }
 
 .new-message textarea {
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: inherit;
     font-size: 14px;
     min-height: 100px;
     resize: vertical;
+    background: white;
     transition: border 0.3s;
 }
 
 .new-message textarea:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+    border-color: #333;
+    box-shadow: none;
 }
 
 .new-message button {
     padding: 12px;
-    background: #667eea;
+    background: #333;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
     transition: background 0.3s;
@@ -378,7 +383,7 @@ body {
 }
 
 .new-message button:hover {
-    background: #764ba2;
+    background: #555;
 }
 
 .new-message button i {
@@ -401,7 +406,7 @@ body {
 
 #threadForm label i {
     margin-right: 8px;
-    color: #667eea;
+    color: #333;
 }
 
 #threadForm input,
@@ -409,9 +414,10 @@ body {
 #threadForm textarea {
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: inherit;
     font-size: 14px;
+    background: white;
     transition: border 0.3s;
 }
 
@@ -419,8 +425,8 @@ body {
 #threadForm select:focus,
 #threadForm textarea:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+    border-color: #333;
+    box-shadow: none;
 }
 
 #threadForm textarea {
@@ -437,7 +443,7 @@ body {
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #f0f0f0;
         display: flex;
         overflow-x: auto;
         position: static;
