@@ -1,0 +1,116 @@
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--color-white);
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 30px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header h1 .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.header h1 .material-icons {
+    font-size: 2.5em;
+    color: var(--color-black);
+}
+
+.header p {
+    color: var(--color-gray-text);
+    font-size: 1.1em;
+}
+
+/* User Section */
+.user-section {
+    background: var(--color-white);
+    padding: 15px 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.user-input {
+    display: flex;
+    gap: 10px;
+}
+
+.user-input input {
+    padding: 10px 15px;
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    background: var(--color-white);
+    transition: border var(--transition-speed);
+}
+
+.user-input input:focus {
+    outline: none;
+    border-color: var(--color-black);
+    box-shadow: none;
+}
+
+.user-input button {
+    padding: 10px 15px;
+    background: var(--color-white);
+    color: var(--color-black);
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background var(--transition-speed);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.user-input button:hover {
+    background: var(--color-gray-light);
+    border-color: #bbb;
+}
+
+.user-input button .material-icons {
+    font-size: 18px;
+}
+
+.current-user {
+    padding: 8px 15px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-border);
+    border-radius: var(--border-radius);
+    color: var(--color-black);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.current-user .material-icons {
+    font-size: 18px;
+}
