@@ -79,9 +79,9 @@ body {
 
 .user-input button {
     padding: 10px 15px;
-    background: #333;
+    background: #666;
     color: white;
-    border: none;
+    border: 1px solid #444;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -89,7 +89,8 @@ body {
 }
 
 .user-input button:hover {
-    background: #555;
+    background: #888;
+    border-color: #555;
 }
 
 .user-input button i {
@@ -203,9 +204,9 @@ body {
 .btn-primary {
     width: 100%;
     padding: 12px;
-    background: #333;
+    background: #666;
     color: white;
-    border: none;
+    border: 1px solid #444;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -215,7 +216,8 @@ body {
 }
 
 .btn-primary:hover {
-    background: #555;
+    background: #888;
+    border-color: #555;
 }
 
 .btn-primary i {
@@ -372,9 +374,9 @@ body {
 
 .new-message button {
     padding: 12px;
-    background: #333;
+    background: #666;
     color: white;
-    border: none;
+    border: 1px solid #444;
     border-radius: 4px;
     cursor: pointer;
     font-weight: 600;
@@ -383,7 +385,8 @@ body {
 }
 
 .new-message button:hover {
-    background: #555;
+    background: #888;
+    border-color: #555;
 }
 
 .new-message button i {
