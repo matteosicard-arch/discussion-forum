@@ -34,7 +34,9 @@ function setUsername() {
 }
 
 function updateUserDisplay() {
-    document.getElementById('currentUser').innerText = `👤 ${currentUser}`;
+    document.getElementById('currentUser').innerText = '';
+    const userDiv = document.getElementById('currentUser');
+    userDiv.innerHTML = `<i class="fas fa-user-circle"></i> ${currentUser}`;
     document.getElementById('username').value = '';
 }
 
@@ -111,9 +113,9 @@ async function loadThreads() {
             card.innerHTML = `
                 <h3>${escapeHtml(thread.title)}</h3>
                 <div class="thread-meta">
-                    <span>👤 ${escapeHtml(thread.author)}</span>
-                    <span>📅 ${date}</span>
-                    <span>💬 ${thread.replies} réponse(s)</span>
+                    <span><i class="fas fa-user"></i> ${escapeHtml(thread.author)}</span>
+                    <span><i class="fas fa-calendar"></i> ${date}</span>
+                    <span><i class="fas fa-comments"></i> ${thread.replies} réponse(s)</span>
                 </div>
                 <div class="thread-preview">${escapeHtml(thread.content.substring(0, 100))}...</div>
             `;
@@ -143,8 +145,8 @@ async function openThread(threadId, threadTitle) {
             const date = new Date(message.createdAt).toLocaleString('fr-FR');
             
             msgDiv.innerHTML = `
-                <div class="message-author">👤 ${escapeHtml(message.author)}</div>
-                <div class="message-time">${date}</div>
+                <div class="message-author"><i class="fas fa-user-circle"></i> ${escapeHtml(message.author)}</div>
+                <div class="message-time"><i class="fas fa-clock"></i> ${date}</div>
                 <div class="message-content">${escapeHtml(message.content).replace(/\n/g, '<br>')}</div>
             `;
             messagesList.appendChild(msgDiv);
